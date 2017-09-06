@@ -1,0 +1,64 @@
+.page-header {
+  user-select: none;
+  cursor: default;
+}
+
+.shops-container {
+  height: 400px;
+  border: 2px dotted #bbb;
+  border-radius: 2%;
+  padding: 1%;
+  overflow: auto;
+}
+
+.shop-items {
+  height: 50px;
+}
+
+.row-bordered:after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #ccc;
+  margin: 0 15px;
+}
+
+.row-bordered > .shop-link {
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #999;
+}
+
+.row-bordered > .shop-link:hover {
+  text-decoration: none;
+  color: #666;
+  cursor: pointer;
+}
+
+.row-bordered > button {
+  margin-right: 15px;
+  margin-bottom: 3px;
+  border-radius: 0;
+}
+
+.btn.btn-primary.add-btn {
+  width: 200px;
+  padding: 15px;
+  vertical-align: middle;
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  border-radius: 0;
+}
+
+.btn.btn-primary.add-btn:hover, .btn.btn-primary.add-btn:focus {
+  background-color: #333;
+}
+
+.btn.btn-success.products-btn, .btn.btn-danger.products-btn {
+  margin-left: 10px;
+}
+
+.btn.btn-success {
+  margin-left: 10px;
+}

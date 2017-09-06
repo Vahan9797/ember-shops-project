@@ -1,0 +1,20 @@
+<div class="col-md-10">
+  {{#unless shopSelected}}
+    <div class="list-group shops-container">
+      {{#each model as |shop|}}
+        <div class='shop-items'>
+          {{shop-item shop=shop}}
+        </div>
+      {{/each}}
+    </div>
+    {{#unless addingMode}}
+      <button class="btn btn-primary add-btn" {{action 'add'}}>Add Shops</button>
+    {{else}}
+      {{shop-add shops=model}}
+    {{/unless}}
+  {{else}}
+    <button class='btn btn-primary' {{action 'backToShopList'}}>Back</button>
+    {{outlet}}
+  {{/unless}}
+</div>
+

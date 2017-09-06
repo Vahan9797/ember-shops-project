@@ -1,0 +1,17 @@
+{{#unless isEditMode}}
+  <td>{{item.name}}</td>
+  <td>{{item.qty}}</td>
+  <td>{{item.price}}</td>
+    <button class='btn btn-success products-btn' {{action 'edit'}}>
+      <span class='glyphicon glyphicon-pencil'></span>
+    </button>
+    <button class='btn btn-danger products-btn' {{action 'delete'}}>
+      <span class='glyphicon glyphicon-trash'></span>
+    </button>
+{{else}}
+  <td>{{input type='text' value=item.name}}</td>
+  <td>{{input type='number' value=item.qty}}</td>
+  <td>{{input type='number'value=item.price}}</td>
+    <button class='btn btn-success' {{action 'saveChanges'}}>Save</button>
+    <button class='btn btn-primary' {{action 'cancel'}}>Cancel</button>
+{{/unless}}

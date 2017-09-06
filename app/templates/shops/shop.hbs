@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>NAME</th>
+      <th>QTY</th>
+      <th>PRICE</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each model.products as |product|}}
+    {{product-item item=product}}
+  {{/each}}
+  </tbody>
+</table>
+{{#unless addingMode}}
+  <button class='btn btn-primary add-btn pull-left' {{action 'add'}}>Add Product</button>
+{{else}}
+  {{product-add shop=model}}
+{{/unless}}
+<span class="col-md-offset-4"><b>Total Price: </b> ${{totalPrice}}</span>

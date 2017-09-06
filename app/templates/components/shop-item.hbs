@@ -1,0 +1,11 @@
+<span class="row row-bordered">
+  {{#unless isEditMode}}
+    {{#link-to 'shops.shop' shop.id class='shop-link'}}{{shop.name}}{{/link-to}}
+    <button class="btn btn-danger pull-right" {{action 'delete' shop.id}}>DELETE</button>
+    <button class="btn btn-success pull-right" {{action 'edit'}}>EDIT</button>
+  {{else}}
+    {{input type='text' class='col-md-6' value=shop.name}}
+    <button class='btn btn-success' {{action 'saveChanges'}}>Save</button>
+    <button class='btn btn-primary' {{action 'cancel'}}>Cancel</button>
+  {{/unless}}
+</span>

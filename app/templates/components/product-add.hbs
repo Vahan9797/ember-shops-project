@@ -1,0 +1,7 @@
+<div class='col-md-10'>
+  {{input type='text' value=name placeholder='Name of the product...' class="col-md-3"}}
+  {{input type='number' value=qty placeholder='Quantity of the product...' class="col-md-3"}}
+  {{input type='number' value=price placeholder='Price of the product...' class="col-md-3"}}
+  <button class='btn btn-success' {{action 'addProduct'}}>Add</button>
+  <button class='btn btn-primary' {{action 'cancel'}}>Cancel</button>
+</div>
